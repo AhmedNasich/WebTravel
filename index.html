@@ -1,0 +1,2529 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="p.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+       <!-- Created By I Am Rochie -->
+     <!-- Tried to make some sort of -->
+     <title> Travel Application </title>
+    <!-- Hope it seems like an app 🙈 -->
+    
+    <!-- Credits
+    Avatar credit: https://icon-icons.com
+    Places credit: https://www.freepik.com
+                                    -->    
+ <!-- Copy for Educational Purpose only -->
+    
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" rel="stylesheet"/> <link href="https://cdn.jsdelivr.net/sweetalert2/6.4.3/sweetalert2.min.css" rel="stylesheet"/> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>   
+</head>
+
+<body>
+
+  <!-- Some sort of introduction -->
+  <div id="img_loader_div">
+  <div id="intro_box_1">
+    <img src="https://i.ibb.co/HNJSyvt/berlin-stupid-dribbble.gif" class="intro_img_1">
+    <h4 class="intro_text_1"> 
+      Hey, there
+    </h4>
+  </div>
+  
+  <div id="intro_box_2">
+    <h4 class="intro_text_2">
+      Enjoy the freshness of journey <br> <span class="moto_1"> #It's all about Animation </span>
+    </h4>
+    <img src="https://i.ibb.co/Jkd2L10/are-you-sensitive-to-air-quality.gif" class="intro_img_2">
+  </div>
+  
+  <div id="intro_box_3">
+   <img src="https://c.tenor.com/bmD27A0-uC4AAAAd/travel-around-the-world.gif" class="intro_img_3">
+    <h4 class="intro_text_3"> 
+      Bored with daily activities ? <br> <span class="moto_1"> Begin the enjoyment by planning a trip </span>
+    </h4>
+  </div>
+  
+  <div id="intro_box_4">
+    <img src="https://i.ibb.co/ZGw3WgD/Explore.gif" class="intro_img_4">
+    <h4 class="intro_text_4"> 
+      Roaming is passion <br> <span class="moto_1"> #Keep Exploring </span>
+    </h4>
+  </div>
+  
+  <div id="intro_box_5">
+    <h4 class="intro_text_5"> Let's go </h4>
+    <img src="https://i.ibb.co/4YfcsNc/education.gif" class="intro_img_5">
+  </div>
+  </div>
+  <!-- Second Introduction / loading img -->
+  <div id="loading_div">
+    <div id="loading_bar"></div>
+    <div class="container_2">
+      <div class="centre">
+        <img src="https://i.ibb.co/RcmhyLS/Loader-truck.gif" class="loader_img"> 
+        <p id="loading_text"> Fetching links </p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Log-in / Register Page -->
+ <div id="avatar_box">
+  <!-- To Close avatar_container -->
+  <img src="https://i.ibb.co/pfZKLWy/Done.png" id="done" onclick="close_avatar()">
+   
+  <div id="dp_container" onclick="open_avatar()">
+    <img src="https://i.ibb.co/PcvB16T/Bear-avatar.png" id="dp">
+  </div>
+  <span id="set_dp_text" onclick="open_avatar()"> 
+    Set Avatar
+  </span> 
+  
+  <div id="arrow"></div>
+  <!-- All selectable Avatar -->
+  <div id="avatar_container">
+    <img src="https://i.ibb.co/j5dBQ9y/Masked-man-avatar.png" onclick="avatar_1()" class="avatar_1">
+  
+    <img src="https://i.ibb.co/pQz32wL/sheep-avatat.png" onclick="avatar_2()" class="avatar_2">
+  
+    <img src="https://i.ibb.co/42zzSbZ/child-girl-avatar.png" onclick="avatar_3()" class="avatar_2">
+  
+    <img src="https://i.ibb.co/hVbQn1t/Love-pencil-avatar.png" onclick="avatar_4()" class="avatar_2">
+  
+    <img src="https://i.ibb.co/pZysdTh/Coffee-cup-avatar.png" onclick="avatar_5()" class="avatar_1">
+  
+    <img src="https://i.ibb.co/qCY0QYV/Pirate-cacti-avatar.png" onclick="avatar_6()" class="avatar_2">
+  
+    <img src="https://i.ibb.co/tZJT7J4/Baby-avatar.png" onclick="avatar_7()" class="avatar_2">
+  
+    <img src="https://i.ibb.co/G7jZXDP/muslim-paranja-woman-Sasta-alan-walker-avatar.png" onclick="avatar_8()" class="avatar_2">
+  
+    <img src="https://i.ibb.co/hZ9VDH1/Anonymous-no-nobody-avatar.png" onclick="avatar_9()" class="avatar_1">
+  
+    <img src="https://i.ibb.co/k4kFnw1/Beard-hipster-man-avatar.png" onclick="avatar_10()" class="avatar_2">
+  
+    <img src="https://i.ibb.co/VScFMVp/Apple-illness-sick-watch-avatar.png" onclick="avatar_11()" class="avatar_2">
+  
+    <img src="https://i.ibb.co/LN9vvZf/Santa-avatar.png" onclick="avatar_12()" class="avatar_2">
+  </div>
+  <input type="text" id="name" placeholder="Name">
+ 
+  <input type="text" id="location" placeholder="Enter Location"> 
+  <!-- Extra Disclaimer feature -->
+  <img src="https://i.ibb.co/J7G22Qn/question-mark.png" id="disclaimer" onclick="open_disclaimer()">
+  
+  <div id="disclaimer_arrow"></div>
+  <div id="disclaimer_box">
+    <p class="disclaimer_text"> Enter the city name to begin the journey. Don't worry we will not share these data to anyone 
+    </p>
+    <h5 id="collapse" onclick="collapse()"> Collapse </h5>
+    <img src="https://i.ibb.co/8bzDVZw/collapse.png" id="collapse_icon" onclick="collapse()">
+  </div>
+  <!-- Register -->
+  <button id="register" onclick="register()"> Register </button>
+  
+  <div class="hr_2"></div>
+  <span class="or"> Or </span>
+  <div class="hr_3"></div>
+  <!-- My Account -->
+  <h4 class="login_alternative"> 
+    Log-in as
+  </h4>
+  <h4 class="Arohi"> Nasich </h4>
+  <h4 class="guest_mail"> 
+    achmadnasich@gmail.com
+  </h4>
+  <img src="https://i.ibb.co/pfMhDdL/Cute-harley-avatar.png" class="special_dp">
+  <div class="vertical_line"></div>
+  <div class="cover" onclick="My_profile()"></div>
+ </div>
+
+ <!-- Guest / My Profile -->
+ <div id="profile_box">
+ <!-- To close Profile -->
+    <div class="back_box">
+      <img src="https://cdn-icons-png.flaticon.com/512/271/271228.png" class="back_icon"> <span class="back_text" onclick="back()"> Back </span>
+    </div>
+    
+    <!-- Profile Setup -->
+    <div class="profile_container">
+      <figure>
+        <img src="https://i.ibb.co/PcvB16T/Bear-avatar.png" id="main_dp">
+      </figure>
+      <h4 id="main_name" class="main_name"> Hlo </h4>
+      <img src="https://i.ibb.co/VQcFcvw/Instagram.png" class="insta_icon"> 
+      <span id="insta_id"> @_I_Stupid_281 </span>
+      <br>
+      <span id="twitter_id"> @Rocking_Stupid </span>
+      <img src="https://i.ibb.co/wBn6P8b/Twitter.png" class="twitter_icon">
+      <!-- Guest Followers|Following -->
+      <h4 class="follower_num"> 1 <br> <span class="follower"> Followers </span> </h4>
+      
+      <h4 class="following_num"> 0 <br> <span class="following"> Following </span> </h4>
+      <!-- My Followers|Following -->
+      
+      <h4 class="follower_num_2"> 1.8K <br> <span class="follower_2"> Followers </span> </h4>
+      
+      <h4 class="following_num_2"> 80 <br> <span class="following_2"> Following </span> </h4>
+      
+      <button id="edit_profile" onclick="edit_profile()"> Edit Profile
+      </button>
+      
+      <div id="edit_pro_box"> 
+        <span class="edit_text"> Editing Profile is temporarily blocked
+        </span>
+      </div>
+      
+    </div>
+    <div class="pro_details_container">
+      <h4 class="text"> My Albums </h4>
+     <!-- My Profile album -->
+      <div class="album_container">
+        <div class="album_box_1">
+          <div class="img_box_1"></div>
+          <div class="img_box_2"></div>
+          <div class="img_box_3"></div>
+          <div class="img_box_4">
+            <div class="extra_img_cover">
+              <span class="text_4">
+                +27 
+              </span>
+            </div>
+          </div>
+           <h4 class="text_3"> 
+             Recent
+           </h4>
+        </div>
+        <div class="album_box_2">
+          <div class="img_box_1"></div>
+          <div class="img_box_2"></div>
+          <div class="img_box_3"></div>
+          <div class="img_box_4">
+            <div class="extra_img_cover">
+              <span class="text_4">
+                +43
+              </span>
+            </div>
+          </div>
+           <h4 class="text_3"> 
+             Mount Fuji tour
+           </h4>
+        </div>
+        <div class="cover_2"></div>
+      </div>
+      <h4 class="text_2"> Favourite places </h4>
+      <div class="fav_container">
+        <div class="fav_place_1">
+          <div class="place_name">
+            <span> Ergaki, Siberia </span>
+          </div>
+        </div>
+        
+        <div class="fav_place_2">
+          <div class="place_name">
+            <span> Amazon basin, Brazil</span>
+          </div>
+        </div>
+        
+        <div class="fav_place_3">
+          <div class="place_name">
+            <span> Mt. Kilimanjaro, Tanzania </span>
+          </div>
+        </div>
+        
+        <div class="fav_place_4">
+          <div class="place_name">
+            <span> Chureito Pagoda, Japan </span>
+          </div>
+        </div>
+        <div class="cover_2"></div>
+      </div>
+      <!-- Guest Album -->
+      <img src="https://www.dropbox.com/s/3bn9ds4p1j7grca/no_result_found.png?raw=1" class="no_result_img">
+      <h4 class="text_5"> No Image Found </h4>
+      <h4 class="text_6"> Begin your journey, plan a trip </h4>
+    </div>
+    
+  </div>
+  <!-- Opening Home page loading div -->
+ <div class="loading_bar_2"></div>
+    
+    
+  <div class="nav">
+    
+  <!-- Nav Bar -->
+  <div id="nav_container" onclick="nav()">
+    <div class="bar_1"></div>
+    <div class="bar_2"></div>
+    <div class="bar_1"></div>
+    <div class="bar_2"></div>
+  </div>
+  <!-- Nav Content -->
+  <div id="nav_content">
+    <img src="https://i.ibb.co/7V3XrM5/arrow-left.png" id="close_nav" onclick="close_nav()">
+      <h4 class="nav_topic_1">
+        <img src="https://i.ibb.co/VQm32Qt/Home.png" class="nav_icon">
+        <span class="nav_text">
+          Home 
+        </span>
+      </h4>
+      <h4 class="nav_topic_2">
+        <img src="https://i.ibb.co/TBkgSXg/Hotel.png" class="nav_icon">
+        <span class="nav_text"> 
+          Hotels
+        </span>
+      </h4>
+      <h4 class="nav_topic_2">
+        <img src="https://i.ibb.co/YdH2yYJ/Flight.png" class="nav_icon">
+        <span class="nav_text"> 
+          Flights 
+        </span>
+      </h4>
+      <h4 class="nav_topic_2">
+        <img src="https://i.ibb.co/zQzkZQb/Train.png" class="nav_icon">
+        <span class="nav_text"> 
+           Trains 
+        </span>
+      </h4>
+      <h4 class="nav_topic_2">
+        <img src="https://i.ibb.co/LprJx2D/Tour-Packages.png" class="nav_icon">
+        <span class="nav_text"> 
+          Tour Packages
+        </span>
+      </h4>
+      <h4 class="nav_topic_2">
+        <img src="https://i.ibb.co/nwGsNfP/Show-more.png" class="nav_icon">
+        <span class="nav_text"> 
+          Show More
+        </span>
+      </h4>
+      <hr class="hr"> 
+      <h4 class="nav_topic_2">
+        <img src="https://i.ibb.co/Cng9qYF/Language.png" class="nav_icon">
+        <span class="nav_text"> 
+          Language 
+        </span>
+        <img src="https://i.ibb.co/DWv5VQ0/English.png" class="language_icon">
+        <span class="nav_text_2">
+          English 
+        </span>
+      </h4>
+      <h4 class="nav_topic_2">
+        <img src="https://i.ibb.co/ZBLCP5S/Currency.png" class="nav_icon">
+        <span class="nav_text"> 
+          Currency 
+        </span>
+        <span class="nav_text_3">
+          Rupiah
+        </span>
+      </h4>
+      <h4 class="nav_topic_2">
+        <img src="https://i.ibb.co/T2zFds6/Guest-Booking.png" class="nav_icon">
+        <span class="nav_text"> 
+          Guest bookings 
+        </span>
+      </h4>
+      <hr class="hr"> 
+      <h4 class="nav_topic_2">
+        <img src="https://i.ibb.co/XsCXpxv/Log-in.png" class="nav_icon">
+        <span class="nav_text"> 
+          Log in 
+        </span>
+      </h4>
+      <h4 class="nav_topic_2">
+        <img src="https://i.ibb.co/WgFbT4L/Register.png" class="nav_icon">
+        <span class="nav_text"> 
+          Register 
+        </span>
+      </h4>
+    <img src="https://i.ibb.co/hHxDDVp/Aeroplane.png" id="aeroplane_icon_1">
+    <img src="https://i.ibb.co/hHxDDVp/Aeroplane.png" id="aeroplane_icon_2">
+    <img src="https://i.ibb.co/hHxDDVp/Aeroplane.png" id="aeroplane_icon_3"> 
+  </div>
+  <!-- Home page profile pic -->
+  <div class="main_page_dp" onclick="main_page_dp()">
+    <img src="https://i.ibb.co/PcvB16T/Bear-avatar.png" class="main_page_dp_img">
+  </div>
+  
+  <!-- Spiti Valley | 1st location -->
+  <!-- Scroll Effect -->
+  <div class="scroll"></div>
+  <!-- Extra space -->
+  <div class="bottom_space"></div>
+  
+    <div class="location_box"> 
+      <img src="https://www.dropbox.com/s/dc48ghmjo5u47b1/spiti_valley.jpg?raw=1" class="location_img">
+      <h2 class="location_name"> Semeru </h2>
+      <img src="https://www.dropbox.com/s/wltps8yylny03xb/white_location.png?raw=1" class="location_icon">
+      <span class="country_name"> Indonesia </span>
+      <span class="know_more"> Tap to know more </span> 
+      <div class="heart_cont">
+        <img src="https://www.dropbox.com/s/sqh86z43t7es407/heart.png?raw=1">
+      </div>
+      <div class="liked_box">
+        <img src="https://api.sololearn.com/Uploads/Avatars/10640404.jpg" class="liked_id">
+        <img src="https://api.sololearn.com/Uploads/Avatars/14245547.jpg" class="liked_id">
+        <img src="https://api.sololearn.com/Uploads/Avatars/7439484.jpg" class="liked_id">
+        <div class="other_liked"> 
+         <span> +14 </span>
+        </div>
+      </div>
+      <h1 class="zoom_l_name"> Semeru </h1>
+      <img src="https://www.dropbox.com/s/wltps8yylny03xb/white_location.png?raw=1" class="zoom_l_icon">
+      <span class="zoom_c_name"> Indonesia </span>
+      <img src="https://www.dropbox.com/s/56i1wd9uksckoxi/white_star.png?raw=1" class="star_icon">
+      <span class="star_text"> 4.2 </span>
+      <div class="date_box">
+        <h4 class="date"> 7-19 | Mar </h4>
+      </div>
+      <div class="book_cont">
+        <span> $599 | Book </span>
+      </div>
+      <div class="close_l_box">
+        <img src="https://www.dropbox.com/s/77f2yky02tw1y5l/white_cross.png?raw=1">
+      </div>
+    </div>
+
+  <!-- Ladakh | 2nd location -->
+  <div class="scroll"></div>
+    <div class="location_box"> 
+      <img src="https://www.dropbox.com/s/5xjcejgqr23zgvx/ladakh.jpg?raw=1" class="location_img">
+      <h2 class="location_name"> Ladakh </h2>
+      <img src="https://www.dropbox.com/s/wltps8yylny03xb/white_location.png?raw=1" class="location_icon">
+      <span class="country_name"> India </span>
+      <span class="know_more"> Tap to know more </span> 
+      <div class="heart_cont">
+        <img src="https://www.dropbox.com/s/sqh86z43t7es407/heart.png?raw=1">
+      </div>
+      <div class="liked_box">
+        <img src="https://api.sololearn.com/Uploads/Avatars/20095418.jpg" class="liked_id">
+        <img src="https://api.sololearn.com/Uploads/Avatars/19181491.jpg" class="liked_id">
+        <img src="https://api.sololearn.com/Uploads/Avatars/14708225.jpg" class="liked_id">
+        <div class="other_liked"> 
+         <span> +41 </span>
+        </div>
+      </div>
+      <h1 class="zoom_l_name"> Ladakh </h1>
+      <img src="https://www.dropbox.com/s/wltps8yylny03xb/white_location.png?raw=1" class="zoom_l_icon">
+      <span class="zoom_c_name"> India </span>
+      <img src="https://www.dropbox.com/s/56i1wd9uksckoxi/white_star.png?raw=1" class="star_icon">
+      <span class="star_text"> 4.7 </span>
+      <div class="date_box">
+        <h4 class="date"> 7-19 | Mar </h4>
+      </div>
+      <div class="book_cont">
+        <span> $469 | Book </span>
+      </div>
+      <div class="close_l_box">
+        <img src="https://www.dropbox.com/s/ujy9rmrgodhtfz4/black_cross.png?raw=1">
+      </div>
+    </div>
+  
+  <!-- Lake Baikai | 3rd location -->
+  <div class="scroll"></div>
+    <div class="location_box"> 
+      <img src="https://www.dropbox.com/s/nef342uyqlabsja/lake_baikai.jpg?raw=1" class="location_img">
+      <h2 class="location_name"> Lake Baikal </h2>
+      <img src="https://www.dropbox.com/s/p5igfbt0s372zs8/black_location.png?raw=1" class="location_icon">
+      <span class="country_name"> Russia </span>
+      <span class="know_more"> Tap to know more </span> 
+      <div class="heart_cont">
+        <img src="https://www.dropbox.com/s/sqh86z43t7es407/heart.png?raw=1">
+      </div>
+      <div class="liked_box">
+        <img src="https://api.sololearn.com/Uploads/Avatars/8175030.jpg" class="liked_id">
+        <img src="https://api.sololearn.com/Uploads/Avatars/21254623.jpg" class="liked_id">
+        <img src="https://api.sololearn.com/Uploads/Avatars/20617819.jpg" class="liked_id">
+        <div class="other_liked"> 
+         <span> +17 </span>
+        </div>
+      </div>
+      <h1 class="zoom_l_name"> Lake Baikal </h1>
+      <img src="https://www.dropbox.com/s/p5igfbt0s372zs8/black_location.png?raw=1" class="zoom_l_icon">
+      <span class="zoom_c_name"> Russia </span>
+      <img src="https://www.dropbox.com/s/gmk1re1c5mp2v95/Black_star.png?raw=1" class="star_icon">
+      <span class="star_text"> 4.8 </span>
+      <div class="date_box">
+        <h4 class="date"> 7-19 | Mar </h4>
+      </div>
+      <div class="book_cont">
+        <span> $749 | Book </span>
+      </div>
+      <div class="close_l_box">
+        <img src="https://www.dropbox.com/s/ujy9rmrgodhtfz4/black_cross.png?raw=1">
+      </div>
+    </div>
+    
+  <!-- Sigiriya | 4th location -->
+  <div class="scroll"></div>
+    <div class="location_box"> 
+      <img src="https://www.dropbox.com/s/igq0uf1wtcmilz3/sigiriya.jpg?raw=1" class="location_img">
+      <h2 class="location_name"> Sigiriya </h2>
+      <img src="https://www.dropbox.com/s/p5igfbt0s372zs8/black_location.png?raw=1" class="location_icon">
+      <span class="country_name"> Sri Lanka </span>
+      <span class="know_more"> Tap to know more </span> 
+      <div class="heart_cont">
+        <img src="https://www.dropbox.com/s/sqh86z43t7es407/heart.png?raw=1">
+      </div>
+      <div class="liked_box">
+        <img src="https://api.sololearn.com/Uploads/Avatars/20717867.jpg" class="liked_id">
+        <img src="https://api.sololearn.com/Uploads/Avatars/12693354.jpg" class="liked_id">
+        <img src="https://api.sololearn.com/Uploads/Avatars/19799173.jpg" class="liked_id">
+        <div class="other_liked"> 
+         <span> +12 </span>
+        </div>
+      </div>
+      <h1 class="zoom_l_name"> Sigiriya </h1>
+      <img src="https://www.dropbox.com/s/p5igfbt0s372zs8/black_location.png?raw=1" class="zoom_l_icon">
+      <span class="zoom_c_name"> Sri Lanka </span>
+      <img src="https://www.dropbox.com/s/gmk1re1c5mp2v95/Black_star.png?raw=1" class="star_icon">
+      <span class="star_text"> 4.2 </span>
+      <div class="date_box">
+        <h4 class="date"> 7-19 | Mar </h4>
+      </div>
+      <div class="book_cont">
+        <span> $249 | Book </span>
+      </div>
+      <div class="close_l_box">
+        <img src="https://www.dropbox.com/s/ujy9rmrgodhtfz4/black_cross.png?raw=1">
+      </div>
+    </div>
+    
+  <!-- Wonderland | 5th location -->
+  <div class="scroll"></div>
+    <div class="location_box"> 
+      <img src="https://www.dropbox.com/s/bdejljji75rft9g/wonderland.jpg?raw=1" class="location_img">
+      <h2 class="location_name"> Wonderland </h2>
+      <img src="https://www.dropbox.com/s/wltps8yylny03xb/white_location.png?raw=1" class="location_icon">
+      <span class="country_name"> Senegal </span>
+      <span class="know_more"> Tap to know more </span> 
+      <div class="heart_cont">
+        <img src="https://www.dropbox.com/s/sqh86z43t7es407/heart.png?raw=1">
+      </div>
+      <div class="liked_box">
+        <img src="https://api.sololearn.com/Uploads/Avatars/19529382.jpg" class="liked_id">
+        <img src="https://api.sololearn.com/Uploads/Avatars/19911926.jpg" class="liked_id">
+        <img src="https://api.sololearn.com/Uploads/Avatars/18772045.jpg" class="liked_id">
+        <div class="other_liked"> 
+         <span> +71 </span>
+        </div>
+      </div>
+      <h1 class="zoom_l_name"> Wonderland </h1>
+      <img src="https://www.dropbox.com/s/wltps8yylny03xb/white_location.png?raw=1" class="zoom_l_icon">
+      <span class="zoom_c_name"> Senegal </span>
+      <img src="https://www.dropbox.com/s/56i1wd9uksckoxi/white_star.png?raw=1" class="star_icon">
+      <span class="star_text"> 4.9 </span>
+      <div class="date_box">
+        <h4 class="date"> 7-19 | Mar </h4>
+      </div>
+      <div class="book_cont">
+        <span> $949 | Book </span>
+      </div>
+      <div class="close_l_box">
+        <img src="https://www.dropbox.com/s/77f2yky02tw1y5l/white_cross.png?raw=1">
+      </div>
+    </div>
+    
+  <!-- Nainital Lake | 6th location -->
+  <div class="scroll"></div>
+    <div class="location_box"> 
+      <img src="https://www.dropbox.com/s/3s9pex0w3rvy3c0/nainital_lake.jpg?raw=1" class="location_img">
+      <h2 class="location_name"> Raja Ampat </h2>
+      <img src="https://www.dropbox.com/s/wltps8yylny03xb/white_location.png?raw=1" class="location_icon">
+      <span class="country_name"> Indonesia </span>
+      <span class="know_more"> Tap to know more </span> 
+      <div class="heart_cont">
+        <img src="https://www.dropbox.com/s/sqh86z43t7es407/heart.png?raw=1">
+      </div>
+      <div class="liked_box">
+        <img src="https://api.sololearn.com/Uploads/Avatars/3573369.jpg" class="liked_id">
+        <img src="https://api.sololearn.com/Uploads/Avatars/9151475.jpg" class="liked_id">
+        <img src="https://api.sololearn.com/Uploads/Avatars/12447674.jpg" class="liked_id">
+        <div class="other_liked"> 
+         <span> +16 </span>
+        </div>
+      </div>
+      <h1 class="zoom_l_name"> Raja Ampat </h1>
+      <img src="https://www.dropbox.com/s/wltps8yylny03xb/white_location.png?raw=1" class="zoom_l_icon">
+      <span class="zoom_c_name"> Indonesia </span>
+      <img src="https://www.dropbox.com/s/56i1wd9uksckoxi/white_star.png?raw=1" class="star_icon">
+      <span class="star_text"> 4.7 </span>
+      <div class="date_box">
+        <h4 class="date"> 7-19 | Mar </h4>
+      </div>
+      <div class="book_cont">
+        <span> $499 | Book </span>
+      </div>
+      <div class="close_l_box">
+        <img src="https://www.dropbox.com/s/77f2yky02tw1y5l/white_cross.png?raw=1">
+      </div>
+    </div>
+    
+<!-- Smoky Mountains | 7th location -->
+  <div class="scroll"></div>
+    <div class="location_box"> 
+      <img src="https://www.dropbox.com/s/u76y2zr3q8q2sdk/great_smoky_mountain.jpg?raw=1" class="location_img">
+      <h2 class="location_name"> Smoky Mountain </h2>
+      <img src="https://www.dropbox.com/s/wltps8yylny03xb/white_location.png?raw=1" class="location_icon">
+      <span class="country_name"> USA </span>
+      <span class="know_more"> Tap to know more </span> 
+      <div class="heart_cont">
+        <img src="https://www.dropbox.com/s/sqh86z43t7es407/heart.png?raw=1">
+      </div>
+      <div class="liked_box">
+        <img src="https://api.sololearn.com/Uploads/Avatars/14808477.jpg" class="liked_id">
+        <img src="https://api.sololearn.com/Uploads/Avatars/23122139.jpg" class="liked_id">
+        <img src="https://api.sololearn.com/Uploads/Avatars/6101198.jpg" class="liked_id">
+        <div class="other_liked"> 
+         <span> +21 </span>
+        </div>
+      </div>
+      <h1 class="zoom_l_name"> Smoky Mountain </h1>
+      <img src="https://www.dropbox.com/s/wltps8yylny03xb/white_location.png?raw=1" class="zoom_l_icon">
+      <span class="zoom_c_name"> USA </span>
+      <img src="https://www.dropbox.com/s/56i1wd9uksckoxi/white_star.png?raw=1" class="star_icon">
+      <span class="star_text"> 4.7 </span>
+      <div class="date_box">
+        <h4 class="date"> 7-19 | Mar </h4>
+      </div>
+      <div class="book_cont">
+        <span> $689 | Book </span>
+      </div>
+      <div class="close_l_box">
+        <img src="https://www.dropbox.com/s/ujy9rmrgodhtfz4/black_cross.png?raw=1">
+      </div>
+    </div>
+    
+  <!-- Tromsø | 8th location -->
+  <div class="scroll"></div>
+    <div class="location_box"> 
+      <img src="https://www.dropbox.com/s/4svavszp0vywota/northern_lights.jpg?raw=1" class="location_img">
+      <h2 class="location_name"> Svalbard </h2>
+      <img src="https://www.dropbox.com/s/wltps8yylny03xb/white_location.png?raw=1" class="location_icon">
+      <span class="country_name"> Norway </span>
+      <span class="know_more"> Tap to know more </span> 
+      <div class="heart_cont">
+        <img src="https://www.dropbox.com/s/sqh86z43t7es407/heart.png?raw=1">
+      </div>
+      <div class="liked_box">
+        <img src="https://api.sololearn.com/Uploads/Avatars/3573369.jpg" class="liked_id">
+        <img src="https://api.sololearn.com/Uploads/Avatars/9151475.jpg" class="liked_id">
+        <img src="https://api.sololearn.com/Uploads/Avatars/12447674.jpg" class="liked_id">
+        <div class="other_liked"> 
+         <span> +62 </span>
+        </div>
+      </div>
+      <h1 class="zoom_l_name"> Svalbard </h1>
+      <img src="https://www.dropbox.com/s/wltps8yylny03xb/white_location.png?raw=1" class="zoom_l_icon">
+      <span class="zoom_c_name"> Norway </span>
+      <img src="https://www.dropbox.com/s/56i1wd9uksckoxi/white_star.png?raw=1" class="star_icon">
+      <span class="star_text"> 4.7 </span>
+      <div class="date_box">
+        <h4 class="date"> 7-19 | Mar </h4>
+      </div>
+      <div class="book_cont">
+        <span> $849 | Book </span>
+      </div>
+      <div class="close_l_box">
+        <img src="https://www.dropbox.com/s/77f2yky02tw1y5l/white_cross.png?raw=1">
+      </div>
+    </div>
+    
+    <div class="bottom_space"></div>    
+  </div>
+  
+  
+  <script>
+  
+  // Getting reference to intro_boxes
+  const intro_box_1 = document.getElementById('intro_box_1');
+  
+  const intro_box_2 = document.getElementById('intro_box_2');
+  
+  const intro_box_3 = document.getElementById('intro_box_3');
+  
+  const intro_box_4 = document.getElementById('intro_box_4');
+  
+  const intro_box_5 = document.getElementById('intro_box_5');
+  // Getting reference of img_loader_div
+  const img_loader_div = document.getElementById('img_loader_div');
+  // Text Changing effect 
+  const text = document.getElementById('loading_text');
+  // Getting reference to loading_div
+  const loading_div = document.getElementById('loading_div');
+  // Getting reference to Main_dp
+  const main_page_dp_img = document.querySelector('.main_page_dp_img');
+  
+  const intro_img_1 = document.querySelector('.intro_img_1');
+  const intro_text_1 = document.querySelector('.intro_text_1');
+  
+  const intro_text_2 = document.querySelector('.intro_text_2');
+  const intro_img_2 = document.querySelector('.intro_img_2');
+  
+  const intro_text_3 = document.querySelector('.intro_text_3');
+  const intro_img_3 = document.querySelector('.intro_img_3');
+  
+  const intro_text_4 = document.querySelector('.intro_text_4');
+  const intro_img_4 = document.querySelector('.intro_img_4');
+  
+  const intro_text_5 = document.querySelector('.intro_text_5');
+  const intro_img_5 = document.querySelector('.intro_img_5');
+  
+  const avatar_box = document.getElementById('avatar_box');
+ 
+  
+  setTimeout(() => {
+    intro_box_1.style.display = 'none';
+  }, 9170);
+  
+  setTimeout(() => {
+    intro_box_2.style.display = 'none';
+  }, 17170);
+  
+  setTimeout(() => {
+    intro_box_3.style.display = 'none';
+  }, 22370);
+  
+  setTimeout(() => {
+    intro_box_4.style.display = 'none';
+    intro_box_5.style.display = 'none';
+    loading_div.style.margin = '0';
+  }, 29600);
+      
+  setTimeout(() => {
+    img_loader_div.style.display = 'none';
+        
+    setTimeout(() => {
+      text.innerHTML = 'Setting Animation';
+            
+      setTimeout(() => {
+        text.innerHTML = 'Adding text';
+              
+        setTimeout(() => {
+          text.innerHTML = 'Redirecting ...';
+                
+          setTimeout(() => {
+            loading_div.style.display = 'none';
+            avatar_box.style.opacity = '1';
+          }, 3700);
+                
+        }, 2400);
+              
+      }, 4800);
+            
+    }, 3950);
+        
+  }, 29800);
+      
+  setTimeout(() => {
+    loading_div.style.display = 'block';
+        
+    setTimeout(() => {
+      document.body.style.backgroundColor = '#112031';
+    }, 2000);
+        
+  }, 27900);
+      
+    // Script for Nav 
+  
+   const nav_ = document.querySelector('.nav');
+   
+   const loading_bar_2 = document.querySelector('.loading_bar_2');
+    // Nav Animation : Opening
+  const nav_animation = document.getElementById('nav_container');
+    // Aeroplane animation: Start
+  const aeroplane = document.getElementById('aeroplane_icon_1');
+  const aeroplane_2 = document.getElementById('aeroplane_icon_2');
+  const aeroplane_3 = document.getElementById('aeroplane_icon_3');
+    // Nav Topic Animation : Start
+  const nav_topic = document.querySelectorAll(".nav_topic");
+  
+  const nav_content = document.getElementById('nav_content');
+  
+  function nav() {
+    
+   nav_animation.style.animationDuration = '1.5s';
+    nav_animation.style.animationName = 'nav_animation';
+    nav_content.style.animationName = 'nav_content';
+    nav_content.style.left = '0';
+    
+    aeroplane.style.animationName = 'aeroplane_1';
+    aeroplane_2.style.animationName = 'aeroplane_2';
+    aeroplane_3.style.animationName = 'aeroplane_3';
+    
+  };
+  
+    // Nav Animation : Closing
+  function close_nav() {
+    const close_nav = document.getElementById('nav_content');
+    
+    close_nav.style.animationName = 'close_nav';
+    close_nav.style.left='-27rem';
+    nav_animation.style.animationName = 'blank';
+    aeroplane.style.animationName = 'blank';
+    aeroplane_2.style.animationName = 'blank';
+    aeroplane_3.style.animationName = 'blank';
+  };
+  
+  // Script for Profile
+    
+    const profile_box = document.querySelector('#profile_box');
+    const scroll = document.querySelectorAll('.scroll');
+  
+    function main_page_dp() {
+      document.body.style.backgroundColor='#f2f2f2';
+     nav_.style.animationName = 'move_left';
+     nav_animation.style.animationName = 'move_left';
+     nav_animation.style.animationDuration = '1.8s';
+     main_page_dp_img.style.animationName = 'move_left';
+     profile_box.style.animationName = 'move_profile';
+      
+     setTimeout(() => {
+       scroll[0].scrollIntoView({behavior: 'smooth'});
+        
+       setTimeout(() => {
+         profile_box.style.left = '0';
+       }, 1000);
+        
+     }, 700);
+      
+    
+     setTimeout(() => {
+       nav_.style.marginLeft = '-100vw';
+       main_page_dp_img.style.marginLeft = '-100vw';
+       nav_animation.style.left = '-100vw';
+       nav_.style.display = 'none';
+     }, 1800);
+    }
+    
+    function back() {
+      nav_content.style.animationName = 'blank';
+      nav_.style.display = 'block';
+      nav_.style.opacity = '0';
+      document.body.style.backgroundColor='#f2f2f2';
+      
+      setTimeout(() => {
+        
+        profile_box.style.animationName = 'close_profile';
+        profile_box.style.left = '-110vw';
+        nav_.style.animationName = 'move_nav';
+        nav_.style.marginLeft = '0';
+        main_page_dp_img.style.animationName = 'move_nav';
+        main_page_dp_img.style.marginLeft = '0';
+        nav_animation.style.left = '2rem';
+        nav_animation.style.animationName = 'move_nav';
+      
+        setTimeout(() => {
+          nav_.style.opacity = '1';
+        }, 800);
+        
+      }, 400);
+    }
+    
+  // Script for Avatar
+  
+  // dp_container Animation
+  const dp_container = document.getElementById('dp_container');
+  // Set_vatar Animation
+  const set_dp_text = document.getElementById('set_dp_text');
+  // Getting reference of arrow
+  const arrow = document.getElementById('arrow');
+  // Getting reference of dp_container
+  const avatar_container = document.getElementById('avatar_container');
+  // To close avatar_container
+  const done = document.getElementById('done');
+  // Getting reference of arrow
+  const disclaimer_arrow = document.getElementById('disclaimer_arrow');
+  // Getting reference of disclaimer_box
+  const disclaimer_box = document.getElementById('disclaimer_box');
+  
+  // Open Avatar setup
+  function open_avatar() {
+    dp_container.style.animationName='move_dp';
+    dp_container.style.left = '0rem';    
+    set_dp_text.style.animationName ='set_avatar';
+    set_dp_text.style.opacity = '0';
+    
+    setTimeout(() => {
+      arrow.style.display = 'block';      
+      avatar_container.style.display = 'block';      
+      done.style.display = 'block';
+    }, 800);
+  }
+  
+  // Close Avatar Setup
+  function close_avatar() {
+    arrow.style.animationName = 'close_arrow';
+    avatar_container.style.animationName = 'close_avatar_container';
+    done.style.animationName = 'close_done';
+    
+    setTimeout(() => {
+      arrow.style.display = 'none';
+      avatar_container.style.display = 'none';
+      done.style.display = 'none';
+           dp_container.style.animationName='move_dp_2';
+      dp_container.style.left = '-10rem';
+      set_dp_text.style.animationName ='set_avatar_2';
+      set_dp_text.style.opacity = '1';
+    }, 800);
+  }
+  
+  // Open Disclaimer/question mark setup
+  function open_disclaimer() {
+    disclaimer_arrow.style.display = 'block';
+    disclaimer_arrow.style.animationName = 'disclaimer_arrow';
+    disclaimer_box.style.display = 'block';
+    disclaimer_box.style.animationName = 'disclaimer_box';
+  }
+ 
+  function collapse() {
+    disclaimer_arrow.style.animationName = 'close_arrow';
+    disclaimer_box.style.animationName = 'close_disclaimer_box';
+    setTimeout(() => {
+      disclaimer_arrow.style.display = 'none';
+      disclaimer_box.style.display = 'none';
+    }, 800);
+  }
+ 
+  // All Avatar Links 
+  const avatar_url = ['https://i.ibb.co/j5dBQ9y/Masked-man-avatar.png',
+  'https://i.ibb.co/pQz32wL/sheep-avatat.png',
+  'https://i.ibb.co/42zzSbZ/child-girl-avatar.png',
+  'https://i.ibb.co/hVbQn1t/Love-pencil-avatar.png',
+  'https://i.ibb.co/pZysdTh/Coffee-cup-avatar.png',
+  'https://i.ibb.co/qCY0QYV/Pirate-cacti-avatar.png',
+  'https://i.ibb.co/tZJT7J4/Baby-avatar.png',
+  'https://i.ibb.co/G7jZXDP/muslim-paranja-woman-Sasta-alan-walker-avatar.png',
+  'https://i.ibb.co/hZ9VDH1/Anonymous-no-nobody-avatar.png',
+  'https://i.ibb.co/k4kFnw1/Beard-hipster-man-avatar.png',
+  'https://i.ibb.co/VScFMVp/Apple-illness-sick-watch-avatar.png',
+  'https://i.ibb.co/LN9vvZf/Santa-avatar.png'];
+  
+  // Taking Dp reference 
+  const dp = document.getElementById('dp');
+ 
+  // Changing dp|main_dp by onclick
+  function avatar_1() {
+    dp.src = `${avatar_url[0]}`;
+    main_dp.src = `${avatar_url[0]}`;
+    main_page_dp_img.src = `${avatar_url[0]}`;
+  }
+  
+  function avatar_2() {
+    dp.src = `${avatar_url[1]}`;
+    main_dp.src = `${avatar_url[1]}`;
+    main_page_dp_img.src = `${avatar_url[1]}`;
+  }
+  
+  function avatar_3() {
+    dp.src = `${avatar_url[2]}`;
+    main_dp.src = `${avatar_url[2]}`;
+    main_page_dp_img.src = `${avatar_url[2]}`;
+  }
+  
+  function avatar_4() {
+    dp.src = `${avatar_url[3]}`;
+    main_dp.src = `${avatar_url[3]}`;
+    main_page_dp_img.src = `${avatar_url[3]}`;
+  }
+  
+  function avatar_5() {
+    dp.src = `${avatar_url[4]}`;
+    main_dp.src = `${avatar_url[4]}`;
+    main_page_dp_img.src = `${avatar_url[4]}`;
+  }
+  
+  function avatar_6() {
+    dp.src = `${avatar_url[5]}`;
+    main_dp.src = `${avatar_url[5]}`;
+    main_page_dp_img.src = `${avatar_url[5]}`;
+  }
+  
+  function avatar_7() {
+    dp.src = `${avatar_url[6]}`;
+    main_dp.src = `${avatar_url[6]}`;
+    main_page_dp_img.src = `${avatar_url[6]}`;
+  }
+  
+  function avatar_8() {
+    dp.src = `${avatar_url[7]}`;
+    main_dp.src = `${avatar_url[7]}`;
+    main_page_dp_img.src = `${avatar_url[7]}`;
+  }
+  
+  function avatar_9() {
+    dp.src = `${avatar_url[8]}`;
+    main_dp.src = `${avatar_url[8]}`;
+    main_page_dp_img.src = `${avatar_url[8]}`;
+  }
+  
+  function avatar_10() {
+    dp.src = `${avatar_url[9]}`;
+    main_dp.src = `${avatar_url[9]}`;
+    main_page_dp_img.src = `${avatar_url[9]}`;
+  }
+  
+  function avatar_11() {
+    dp.src = `${avatar_url[10]}`;
+    main_dp.src = `${avatar_url[10]}`;
+    main_page_dp_img.src = `${avatar_url[10]}`;
+  }
+  
+  function avatar_12() {
+    dp.src = `${avatar_url[11]}`;
+    main_dp.src = `${avatar_url[11]}`;
+    main_page_dp_img.src = `${avatar_url[11]}`;
+  }
+  // to set main_dp
+  const main_dp = document.getElementById('main_dp');
+  
+  // Script for Profile
+  
+    // For insta_id
+    const insta_id = document.getElementById('insta_id');
+    // For twitter_id
+    const twitter_id = document.getElementById('twitter_id');
+      
+    // To get name 
+    const main_name = document.getElementById('main_name');
+    
+    // To get album & fav places
+    const album_container = document.querySelector('.album_container');
+    const fav_container = document.querySelector('.fav_container');
+    
+    const text_2 = document.querySelector('.text_2');    
+    const edit_profile_btn = document.getElementById('edit_profile');
+    
+    function My_profile() {
+      // To Add Extra followers 
+      const follower_num_2 = document.querySelector('.follower_num_2');
+      const following_num_2 = document.querySelector('.following_num_2');
+      
+      follower_num_2.style.display = 'block';
+      following_num_2.style.display = 'block';
+      edit_profile_btn.style.display = 'block';
+      
+      main_name.innerHTML = "Nasich";
+      // Executinh My social media id
+      insta_id.innerHTML = `@ahmed_nasich`;
+      twitter_id.innerHTML = `@muchammadnasich`;
+      // My Default dp
+      main_dp.src = 'https://i.ibb.co/pfMhDdL/Cute-harley-avatar.png';
+      main_page_dp_img.src = 'https://i.ibb.co/pfMhDdL/Cute-harley-avatar.png';     
+      // To get album & fav places
+      album_container.style.display = 'flex';
+      fav_container.style.display = 'flex';
+      text_2.style.display = 'block';
+      
+     loading_bar_2.style.animationName = 'loading_bar_2';
+      setTimeout(() => {
+        avatar_box.style.display = 'none';
+        nav_.style.display = 'block';
+      }, 3500);
+    };
+    
+    const pro_details_container = document.querySelector('.pro_details_container');    
+    const no_result_img = document.querySelector('.no_result_img');
+    const text_5 = document.querySelector('.text_5');
+    const text_6 = document.querySelector('.text_6');
+    // Guest Profile Setup
+    function register() {
+      var name_value = document.getElementById('name').value;
+      
+      if(name_value === ''){
+        name_value = "Stupid";
+      }else{
+        name_value = document.getElementById('name').value;
+      }
+   
+      var location_value = document.getElementById('location').value;    
+  
+      if(location_value == ''){
+        location_value = "Kolkata";
+      }else{
+        location_value = document.getElementById('location').value;
+      }
+      
+      main_name.innerHTML = name_value;
+  // Adding guest Insta & Twitter id 
+      insta_id.innerHTML = `@${name_value}`;
+      twitter_id.innerHTML = `@Rocking_${name_value}`;
+      
+  // Adding visibility to follower_num & following_num
+      const follower_num = document.querySelector('.follower_num');
+      const following_num = document.querySelector('.following_num');
+      
+      follower_num.style.display = 'block';
+      following_num.style.display = 'block';
+      
+      // Decreasing height 
+      pro_details_container.style.height = "42.8rem";
+   // Adding visibility to no_result_img | text_5 | text_6
+      no_result_img.style.display = 'inline';
+      text_5.style.display = 'block';
+      text_6.style.display = 'block';
+      
+     // edit_profile_btn display 
+      edit_profile_btn.style.display = 'block';
+      
+     loading_bar_2.style.animationName = 'loading_bar_2';
+      setTimeout(() => {
+        avatar_box.style.display = 'none';
+        nav_.style.display = 'block';
+      }, 3500);
+    };
+    // Uneditable Profile Setup
+    function edit_profile() {
+      const edit_pro_box = document.getElementById('edit_pro_box');     
+      edit_pro_box.style.animationName = 'edit_text';
+      setTimeout(() => {
+        edit_pro_box.style.animationName = 'blank';
+      }, 4000);
+    };
+  </script>
+  
+  <!-- Spiti Villey Js setup -->
+    
+  <script>
+
+  // getting date for planing trip 
+  const d = new Date();
+  
+  let z = 7;
+  let m = d.getMonth();
+  let y = '';
+  switch(m){
+    case 0: y = 'Jan';
+    break;
+    case 1: y = 'Feb';
+    break;
+    case 2: y = 'Mar';
+    break;
+    case 3: y = 'Apr';
+    break;
+    case 4: y = 'May';
+    break;
+    case 5: y = 'June';
+    break;
+    case 6: y = 'july';
+    break;
+    case 7: y = 'Aug';
+    break;
+    case 8: y = 'Sept';
+    break;
+    case 9: y = 'Oct';
+    break;
+    case 10: y = 'Nov';
+    break;
+    case 11: y = 'Dec';
+    break;
+    default: y = 'Mar';
+  }
+  
+  scroll[1].style.top = '90vh';
+  scroll[2].style.top = '180vh';
+  scroll[3].style.top = '270vh';
+  scroll[4].style.top = '360vh';
+  scroll[5].style.top = '450vh';
+  scroll[6].style.top = '540vh';
+  scroll[7].style.top = '630vh';
+  
+  const location_img = document.querySelectorAll('.location_img');
+  const location_box = document.querySelectorAll('.location_box');
+   
+  const location_name = document.querySelectorAll('.location_name');
+  const location_icon = document.querySelectorAll('.location_icon');
+  const country_name = document.querySelectorAll('.country_name');
+  const know_more = document.querySelectorAll('.know_more');
+  // adding night mode color
+  know_more[2].style.color = '#000';
+  location_name[2].style.color ='#222';
+  country_name[2].style.color = '#222';
+  
+  know_more[3].style.color = '#000';
+  location_name[3].style.color ='#222';
+  country_name[3].style.color = '#222';
+   // adding different color for different location
+  const heart = document.querySelectorAll('.heart_cont');
+  const liked_box = document.querySelectorAll('.liked_box');
+  const other_liked = document.querySelectorAll('.other_liked');
+  heart[3].style.backgroundColor = "rgba(241, 196, 71, .7)";
+  other_liked[3].style.backgroundColor = "rgba(241, 196, 71, .7)";
+  heart[5].style.backgroundColor = "rgba(255, 187, 180, .7)";
+  other_liked[5].style.backgroundColor = "rgba(255, 187, 180, .7)";
+  heart[6].style.backgroundColor = "rgba(133, 152, 133, .6)";
+  other_liked[6].style.backgroundColor = "rgba(133, 152, 133, .6)";
+  
+  const zoom_l_name = document.querySelectorAll('.zoom_l_name');
+  const zoom_l_icon = document.querySelectorAll('.zoom_l_icon');
+  const zoom_c_name = document.querySelectorAll('.zoom_c_name');
+  const star_icon = document.querySelectorAll('.star_icon');
+  const star_text = document.querySelectorAll('.star_text');
+  
+  const date_box = document.querySelectorAll('.date_box');
+  const date = document.querySelectorAll('.date');
+  const book_cont = document.querySelectorAll('.book_cont');
+  date_box[3].style.backgroundColor = "rgba(241, 196, 71, .7)";
+  book_cont[3].style.backgroundColor =  'rgba(241, 196, 71, .7)';
+  date_box[5].style.backgroundColor = "rgba(255, 187, 180, .7)";
+  book_cont[5].style.backgroundColor =  'rgba(255, 187, 180, .7)';
+  date_box[6].style.backgroundColor = "rgba(133, 152, 133, .6)";
+  book_cont[6].style.backgroundColor =  'rgba(133, 152, 133, .6)';
+  
+  const close_box = document.querySelectorAll('.close_l_box');
+  const close_l_box = document.querySelectorAll('.close_l_box')
+  
+  location_box[0].addEventListener('click',() => {
+    
+    scroll[0].scrollIntoView({behavior: 'smooth'});
+    scroll[1].style.top = '100vh';
+    
+    location_box[0].style.animationName = 'location_img';
+    location_name[0].style.animationName = 'location_name';
+    location_name[0].style.animationDelay = '.2s';
+    location_icon[0].style.animationName = 'location_icon';
+    country_name[0].style.animationName = 'country_name';
+    know_more[0].style.animationName = 'country_name';
+     
+    heart[0].style.animationName ='heart';
+    heart[0].style.animationDelay = '1.8s';
+    liked_box[0].style.animationName = 'heart';
+    liked_box[0].style.animationDelay = '1.9s';
+    
+    date[0].innerHTML = `${z+2}-${z+14} | ${y}`;
+    
+    setTimeout(() => {
+      location_name[0].style.display = 'none';
+      location_icon[0].style.display = 'none';
+      country_name[0].style.display = 'none';
+      know_more[0].style.display = 'none';
+      
+      setTimeout(() => {
+        heart[0].style.opacity = '1';
+        liked_box[0].style.opacity = '.8';
+                        nav_container.style.animationDuration = '.8s';
+        nav_container.style.animationName = 'nav_clr';
+        nav_animation.style.backgroundColor = 'rgba(177, 208, 224, .2)';
+        
+        setTimeout(() => {
+          zoom_l_name[0].style.display = 'block';
+          zoom_l_name[0].style.animationName = 'add_name';
+        
+        setTimeout(() => {
+          zoom_l_icon[0].style.display = 'inline';
+          zoom_l_icon[0].style.animationName = 'zoom_l_icon';
+          zoom_c_name[0].style.display = 'block';
+          zoom_c_name[0].style.animationName = 'zoom_c_name';
+          star_icon[0].style.display = 'block';
+          star_icon[0].style.animationName = 'zoom_l_icon';
+          star_text[0].style.display = 'block';
+          star_text[0].style.animationName = 'zoom_c_name';
+          
+          setTimeout(() => {
+            date_box[0].style.display = 'block';
+            date_box[0].style.animationName = 'zoom_l_icon';
+            
+            setTimeout(() => {
+              book_cont[0].style.display = 'block';
+              book_cont[0].style.animationName = 'book_cont';
+              
+              close_box[0].style.animationName = 'close_box';
+              close_box[0].style.display = 'block';
+              
+  
+  close_l_box[0].addEventListener('click', (event) => {
+   
+    scroll[1].style.top = '90vh';
+    
+   book_cont[0].style.animationName = 'close_book_cont';
+   
+   setTimeout(() => {
+    date_box[0].style.animationName = 'close_zoom_l_icon';
+    close_box[0].style.animationName = 'vanish_close_box';
+    
+    setTimeout(() => {
+      zoom_l_icon[0].style.animationName = 'close_zoom_l_icon';
+      star_icon[0].style.animationName = 'close_zoom_l_icon';
+      zoom_c_name[0].style.animationName = 'close_zoom_c_name';
+      star_text[0].style.animationName = 'close_zoom_c_name';
+        
+      setTimeout(() => {
+        zoom_l_name[0].style.animationName = 'remove_name';
+        close_box[0].style.display ='none';
+        
+        setTimeout(() => {
+          zoom_l_icon[0].style.display = 'none';
+          zoom_c_name[0].style.display = 'none';
+          star_icon[0].style.display = 'none';
+          star_text[0].style.display = 'none';
+          zoom_l_name[0].style.display = 'none';
+          book_cont[0].style.display = 'none';
+          date_box[0].style.display = 'none';
+          
+          heart[0].style.animationName = 'close_heart';
+          heart[0].style.animationDelay = '0s';
+          liked_box[0].style.animationName = 'close_heart';
+          liked_box[0].style.animationDelay = '0s'
+          setTimeout(() => {
+            heart[0].style.opacity = '0';
+            liked_box[0].style.opacity = '0';
+            location_box[0].style.animationName = 'close_location_img';
+            location_box[0].style.width = '80vw';
+            location_box[0].style.height = '80vh';
+            
+            setTimeout(() => {
+              location_box[0].style.borderRadius = '16px';
+              location_img[0].style.borderRadius = '16px';
+            }, 300);
+            
+            setTimeout(() => {
+              location_box[0].style.left = '10vw';
+              location_box[0].style.marginTop = '10vh';
+              
+              nav_container.style.animationDuration = '.8s';
+              nav_container.style.animationName = 'clear_nav_clr';
+              nav_animation.style.backgroundColor = 'rgba(177, 208, 224, 1)';
+      
+              setTimeout(() => {
+               location_name[0].style.animationName = 'close_location_name';
+                location_name[0].style.animationDelay = '0s';
+                location_name[0].style.display = 'block';
+                setTimeout(() => {
+                  location_icon[0].style.animationName = 'close_location_icon';
+                  location_icon[0].style.display = 'block';
+                  country_name[0].style.animationName = 'close_country_name';
+                  country_name[0].style.display = 'block';
+                  know_more[0].style.animationName = 'close_country_name';
+                  know_more[0].style.display = 'block';
+                }, 200);
+                
+              }, 1400);
+              
+            }, 200);
+            
+          }, 200);
+            
+        }, 200);
+          
+      }, 100);
+        
+    }, 200);
+    
+   }, 300);
+   event.stopPropagation();
+  });
+              
+            }, 200);
+            
+          }, 300);
+          
+        }, 100);
+        
+        }, 100);
+        
+      }, 1800);
+      
+    }, 500);
+     
+    setTimeout(() => {
+      location_box[0].style.marginTop = '0';
+      location_box[0].style.left = '0';
+      location_box[0].style.width = '100vw';
+      location_box[0].style.height = '100vh';
+      location_img[0].style.borderRadius = '0';
+      
+    }, 1200);
+   });
+      
+  </script> 
+  
+  <!-- Ladakh | 2nd location -->
+  <script>
+
+  location_box[1].addEventListener('click',() => {
+    
+    scroll[1].scrollIntoView({behavior: 'smooth'});
+    scroll[2].style.top = '190vh';
+    
+    location_box[1].style.animationName = 'location_img';
+    location_name[1].style.animationName = 'location_name';
+    location_name[1].style.animationDelay = '.2s';
+    location_icon[1].style.animationName = 'location_icon';
+    country_name[1].style.animationName = 'country_name';
+    know_more[1].style.animationName = 'country_name';
+     
+    heart[1].style.animationName ='heart';
+    heart[1].style.animationDelay = '1.8s';
+    liked_box[1].style.animationName = 'heart';
+    liked_box[1].style.animationDelay = '1.9s';
+    
+    date[1].innerHTML = `${z}-${z+12} | ${y}`;
+     
+    setTimeout(() => {
+      location_name[1].style.display = 'none';
+      location_icon[1].style.display = 'none';
+      country_name[1].style.display = 'none';
+      know_more[1].style.display = 'none';
+      
+      setTimeout(() => {
+        heart[1].style.opacity = '1';
+        liked_box[1].style.opacity = '.8';
+        
+        nav_container.style.animationDuration = '.8s';
+        nav_container.style.animationName = 'nav_clr';
+        nav_animation.style.backgroundColor = 'rgba(177, 208, 224, .2)';
+        
+        setTimeout(() => {
+          zoom_l_name[1].style.display = 'block';
+          zoom_l_name[1].style.animationName = 'add_name';
+        
+        setTimeout(() => {
+          zoom_l_icon[1].style.display = 'inline';
+          zoom_l_icon[1].style.animationName = 'zoom_l_icon';
+          zoom_c_name[1].style.display = 'block';
+          zoom_c_name[1].style.animationName = 'zoom_c_name';
+          star_icon[1].style.display = 'block';
+          star_icon[1].style.animationName = 'zoom_l_icon';
+          star_text[1].style.display = 'block';
+          star_text[1].style.animationName = 'zoom_c_name';
+          
+          setTimeout(() => {
+            date_box[1].style.display = 'block';
+            date_box[1].style.animationName = 'zoom_l_icon';
+            
+            setTimeout(() => {
+              book_cont[1].style.display = 'block';
+              book_cont[1].style.animationName = 'book_cont';
+              
+              close_box[1].style.animationName = 'close_box';
+              close_box[1].style.display = 'block';
+ 
+  close_l_box[1].addEventListener('click', (event) => {
+   
+   scroll[2].style.top = '180vh';
+   book_cont[1].style.animationName = 'close_book_cont';
+   
+   setTimeout(() => {
+    date_box[1].style.animationName = 'close_zoom_l_icon';
+    close_box[1].style.animationName = 'vanish_close_box';
+    
+    setTimeout(() => {
+      zoom_l_icon[1].style.animationName = 'close_zoom_l_icon';
+      star_icon[1].style.animationName = 'close_zoom_l_icon';
+      zoom_c_name[1].style.animationName = 'close_zoom_c_name';
+      star_text[1].style.animationName = 'close_zoom_c_name';
+        
+      setTimeout(() => {
+        zoom_l_name[1].style.animationName = 'remove_name';
+        close_box[1].style.display ='none';
+        
+        setTimeout(() => {
+          zoom_l_icon[1].style.display = 'none';
+          zoom_c_name[1].style.display = 'none';
+          star_icon[1].style.display = 'none';
+          star_text[1].style.display = 'none';
+          zoom_l_name[1].style.display = 'none';
+          book_cont[1].style.display = 'none';
+          date_box[1].style.display = 'none';
+          
+          heart[1].style.animationName = 'close_heart';
+          heart[1].style.animationDelay = '0s';
+          liked_box[1].style.animationName = 'close_heart';
+          liked_box[1].style.animationDelay = '0s'
+          setTimeout(() => {
+            heart[1].style.opacity = '0';
+            liked_box[1].style.opacity = '0';
+            location_box[1].style.animationName = 'close_location_img';
+            location_box[1].style.width = '80vw';
+            location_box[1].style.height = '80vh';
+            
+            setTimeout(() => {
+                          location_box[1].style.borderRadius = '16px';
+              location_img[1].style.borderRadius = '16px';
+            }, 300);
+            
+            setTimeout(() => {
+              location_box[1].style.left = '10vw';
+              location_box[1].style.marginTop = '10vh';
+                           nav_container.style.animationDuration = '.8s';
+              nav_container.style.animationName = 'clear_nav_clr';
+              nav_animation.style.backgroundColor = 'rgba(177, 208, 224, 1)';
+              
+              setTimeout(() => {
+                              location_name[1].style.animationName = 'close_location_name';
+                location_name[1].style.animationDelay = '0s';
+                location_name[1].style.display = 'block';
+                setTimeout(() => {
+                  location_icon[1].style.animationName = 'close_location_icon';
+                  location_icon[1].style.display = 'block';
+                  country_name[1].style.animationName = 'close_country_name';
+                  country_name[1].style.display = 'block';
+                  know_more[1].style.animationName = 'close_country_name';
+                  know_more[1].style.display = 'block';
+  
+                }, 200);
+                
+              }, 1400);
+              
+            }, 200);
+            
+          }, 200);
+            
+        }, 200);
+          
+      }, 100);
+        
+    }, 200);
+    
+   }, 300);
+   event.stopPropagation();
+  });
+              
+            }, 200);
+            
+          }, 300);
+          
+        }, 100);
+        
+        }, 100);
+        
+      }, 1800);
+      
+    }, 500);
+     
+    setTimeout(() => {
+      location_box[1].style.marginTop = '0';
+      location_box[1].style.left = '0';
+      location_box[1].style.width = '100vw';
+      location_box[1].style.height = '100vh';
+      location_img[1].style.borderRadius = '0';
+      
+    }, 1200);
+   });
+      
+  </script>
+  
+  <!-- Lake Baikai | 3rd location -->
+  <script>
+
+  location_box[2].addEventListener('click',() => {
+    
+    zoom_l_name[2].style.color ='#222';
+    zoom_c_name[2].style.color ='#222';
+    star_text[2].style.color = '#222';
+    
+    scroll[3].style.top = '280vh';
+    scroll[2].scrollIntoView({behavior: 'smooth'});
+    location_box[2].style.animationName = 'location_img';
+    location_name[2].style.animationName = 'location_name';
+    location_name[2].style.animationDelay = '.2s';
+    location_icon[2].style.animationName = 'location_icon';
+    country_name[2].style.animationName = 'country_name';
+    know_more[2].style.animationName = 'country_name';
+    heart[2].style.animationName ='heart';
+    heart[2].style.animationDelay = '1.8s';
+    liked_box[2].style.animationName = 'heart';
+    liked_box[2].style.animationDelay = '1.9s';
+    
+    date[2].innerHTML = `${z-5}-${z+8} | ${y}`;
+    
+    setTimeout(() => {
+      location_name[2].style.display = 'none';
+      location_icon[2].style.display = 'none';
+      country_name[2].style.display = 'none';
+      know_more[2].style.display = 'none';
+      
+      setTimeout(() => {
+        heart[2].style.opacity = '1';
+        liked_box[2].style.opacity = '.8';
+        
+        nav_container.style.animationDuration = '.8s';
+        nav_container.style.animationName = 'nav_clr';
+        nav_animation.style.backgroundColor = 'rgba(177, 208, 224, .2)';
+        
+        setTimeout(() => {
+          zoom_l_name[2].style.display = 'block';
+          zoom_l_name[2].style.animationName = 'add_name';
+          
+        setTimeout(() => {
+          zoom_l_icon[2].style.display = 'inline';
+          zoom_l_icon[2].style.animationName = 'zoom_l_icon';
+          zoom_c_name[2].style.display = 'block';
+          zoom_c_name[2].style.animationName = 'zoom_c_name';
+          star_icon[2].style.display = 'block';
+          star_icon[2].style.animationName = 'zoom_l_icon';
+          star_text[2].style.display = 'block';
+          star_text[2].style.animationName = 'zoom_c_name';
+          
+          setTimeout(() => {
+            date_box[2].style.display = 'block';
+            date_box[2].style.animationName = 'zoom_l_icon';
+            
+            setTimeout(() => {
+              book_cont[2].style.display = 'block';
+              book_cont[2].style.animationName = 'book_cont';
+              close_box[2].style.animationName = 'close_box';
+              close_box[2].style.display = 'block';
+  
+  
+  close_l_box[2].addEventListener('click', (event) => {
+    
+   scroll[3].style.top = '270vh';
+   book_cont[2].style.animationName = 'close_book_cont';
+   
+   setTimeout(() => {
+    date_box[2].style.animationName = 'close_zoom_l_icon';
+    close_box[2].style.animationName = 'vanish_close_box';
+    
+    setTimeout(() => {
+      zoom_l_icon[2].style.animationName = 'close_zoom_l_icon';
+      star_icon[2].style.animationName = 'close_zoom_l_icon';
+      zoom_c_name[2].style.animationName = 'close_zoom_c_name';
+      star_text[2].style.animationName = 'close_zoom_c_name';
+        
+      setTimeout(() => {
+        zoom_l_name[2].style.animationName = 'remove_name';
+        close_box[2].style.display ='none';
+        
+        setTimeout(() => {
+          zoom_l_icon[2].style.display = 'none';
+          zoom_c_name[2].style.display = 'none';
+          star_icon[2].style.display = 'none';
+          star_text[2].style.display = 'none';
+          zoom_l_name[2].style.display = 'none';
+          book_cont[2].style.display = 'none';
+          date_box[2].style.display = 'none';
+          heart[2].style.animationName = 'close_heart';
+          heart[2].style.animationDelay = '0s';
+          liked_box[2].style.animationName = 'close_heart';
+          liked_box[2].style.animationDelay = '0s';
+          
+          setTimeout(() => {
+            heart[2].style.opacity = '0';
+            liked_box[2].style.opacity = '0';
+            location_box[2].style.animationName = 'close_location_img';
+            location_box[2].style.width = '80vw';
+            location_box[2].style.height = '80vh';
+            
+            setTimeout(() => {
+              location_box[2].style.borderRadius = '16px';
+              location_img[2].style.borderRadius = '16px';
+            }, 300);
+            
+            setTimeout(() => {
+              location_box[2].style.left = '10vw';
+              location_box[2].style.marginTop = '10vh';
+              
+              nav_container.style.animationDuration = '.8s';
+              nav_container.style.animationName = 'clear_nav_clr';
+              nav_animation.style.backgroundColor = 'rgba(177, 208, 224, 1)';
+              
+              setTimeout(() => {
+                location_name[2].style.animationName = 'close_location_name';
+                location_name[2].style.animationDelay = '0s';
+                location_name[2].style.display = 'block';
+                
+                setTimeout(() => {
+                  location_icon[2].style.animationName = 'close_location_icon';
+                  location_icon[2].style.display = 'block';
+                  country_name[2].style.animationName = 'close_country_name';
+                  country_name[2].style.display = 'block';
+                  know_more[2].style.animationName = 'close_country_name';
+                  know_more[2].style.display = 'block';
+                }, 200);
+                
+              }, 1400);
+              
+            }, 200);
+            
+          }, 200);
+          
+        }, 200);
+        
+      }, 100);
+      
+    }, 200);
+    
+   }, 300);
+   event.stopPropagation();
+  });
+            }, 200);
+            
+          }, 300);
+          
+        }, 100);
+        
+        }, 100);
+        
+      }, 1800);
+      
+    }, 500);
+     
+    setTimeout(() => {
+      location_box[2].style.marginTop = '0';
+      location_box[2].style.left = '0';
+      location_box[2].style.width = '100vw';
+      location_box[2].style.height = '100vh';
+      location_img[2].style.borderRadius = '0';
+    }, 1200);
+   });
+   
+  </script>
+  
+  <!-- Sigiriya | 4th location -->
+  <script>
+
+  location_box[3].addEventListener('click',() => {
+    
+    zoom_l_name[3].style.color ='#222';
+    zoom_c_name[3].style.color ='#222';
+    star_text[3].style.color = '#222';
+    
+    scroll[4].style.top = '370vh';
+    scroll[3].scrollIntoView({behavior: 'smooth'});
+    location_box[3].style.animationName = 'location_img';
+    location_name[3].style.animationName = 'location_name';
+    location_name[3].style.animationDelay = '.2s';
+    location_icon[3].style.animationName = 'location_icon';
+    country_name[3].style.animationName = 'country_name';
+    know_more[3].style.animationName = 'country_name';
+    heart[3].style.animationName ='heart';
+    heart[3].style.animationDelay = '1.8s';
+    liked_box[3].style.animationName = 'heart';
+    liked_box[3].style.animationDelay = '1.9s';
+    
+    date[3].innerHTML = `${z+10}-${z+20} | ${y}`;
+    
+    setTimeout(() => {
+      location_name[3].style.display = 'none';
+      location_icon[3].style.display = 'none';
+      country_name[3].style.display = 'none';
+      know_more[3].style.display = 'none';
+      
+      setTimeout(() => {
+        heart[3].style.opacity = '1';
+        liked_box[3].style.opacity = '.8';
+        
+        nav_container.style.animationDuration = '.8s';
+        nav_container.style.animationName = 'nav_clr_2';
+        nav_animation.style.backgroundColor = 'rgba(241, 196, 71, .2)';
+        
+        setTimeout(() => {
+          zoom_l_name[3].style.display = 'block';
+          zoom_l_name[3].style.animationName = 'add_name';
+          
+        setTimeout(() => {
+          zoom_l_icon[3].style.display = 'inline';
+          zoom_l_icon[3].style.animationName = 'zoom_l_icon';
+          zoom_c_name[3].style.display = 'block';
+          zoom_c_name[3].style.animationName = 'zoom_c_name';
+          star_icon[3].style.display = 'block';
+          star_icon[3].style.animationName = 'zoom_l_icon';
+          star_text[3].style.display = 'block';
+          star_text[3].style.animationName = 'zoom_c_name';
+          
+          setTimeout(() => {
+            date_box[3].style.display = 'block';
+            date_box[3].style.animationName = 'zoom_l_icon';
+            
+            setTimeout(() => {
+              book_cont[3].style.display = 'block';
+              book_cont[3].style.animationName = 'book_cont';
+              close_box[3].style.animationName = 'close_box';
+              close_box[3].style.display = 'block';
+  
+  
+  close_l_box[3].addEventListener('click', (event) => {
+    
+   scroll[4].style.top = '360vh';
+   book_cont[3].style.animationName = 'close_book_cont';
+   
+   setTimeout(() => {
+    date_box[3].style.animationName = 'close_zoom_l_icon';
+    close_box[3].style.animationName = 'vanish_close_box';
+    
+    setTimeout(() => {
+      zoom_l_icon[3].style.animationName = 'close_zoom_l_icon';
+      star_icon[3].style.animationName = 'close_zoom_l_icon';
+      zoom_c_name[3].style.animationName = 'close_zoom_c_name';
+      star_text[3].style.animationName = 'close_zoom_c_name';
+        
+      setTimeout(() => {
+        zoom_l_name[3].style.animationName = 'remove_name';
+        close_box[3].style.display ='none';
+        
+        setTimeout(() => {
+          zoom_l_icon[3].style.display = 'none';
+          zoom_c_name[3].style.display = 'none';
+          star_icon[3].style.display = 'none';
+          star_text[3].style.display = 'none';
+          zoom_l_name[3].style.display = 'none';
+          book_cont[3].style.display = 'none';
+          date_box[3].style.display = 'none';
+          heart[3].style.animationName = 'close_heart';
+          heart[3].style.animationDelay = '0s';
+          liked_box[3].style.animationName = 'close_heart';
+          liked_box[3].style.animationDelay = '0s';
+          
+          setTimeout(() => {
+            heart[3].style.opacity = '0';
+            liked_box[3].style.opacity = '0';
+            location_box[3].style.animationName = 'close_location_img';
+            location_box[3].style.width = '80vw';
+            location_box[3].style.height = '80vh';
+            
+            setTimeout(() => {
+              location_box[3].style.borderRadius = '16px';
+              location_img[3].style.borderRadius = '16px';
+            }, 300);
+            
+            setTimeout(() => {
+              location_box[3].style.left = '10vw';
+              location_box[3].style.marginTop = '10vh';
+              
+              nav_container.style.animationDuration = '.8s';
+              nav_container.style.animationName = 'clear_nav_clr_2';
+              nav_animation.style.backgroundColor = 'rgba(241, 196, 71, 1)';
+              
+              setTimeout(() => {
+                location_name[3].style.animationName = 'close_location_name';
+                location_name[3].style.animationDelay = '0s';
+                location_name[3].style.display = 'block';
+                
+                setTimeout(() => {
+                  location_icon[3].style.animationName = 'close_location_icon';
+                  location_icon[3].style.display = 'block';
+                  country_name[3].style.animationName = 'close_country_name';
+                  country_name[3].style.display = 'block';
+                  know_more[3].style.animationName = 'close_country_name';
+                  know_more[3].style.display = 'block';
+                }, 200);
+                
+              }, 1400);
+              
+            }, 200);
+            
+          }, 200);
+          
+        }, 200);
+        
+      }, 100);
+      
+    }, 200);
+    
+   }, 300);
+   event.stopPropagation();
+  });
+            }, 200);
+            
+          }, 300);
+          
+        }, 100);
+        
+        }, 100);
+        
+      }, 1800);
+      
+    }, 500);
+     
+    setTimeout(() => {
+      location_box[3].style.marginTop = '0';
+      location_box[3].style.left = '0';
+      location_box[3].style.width = '100vw';
+      location_box[3].style.height = '100vh';
+      location_img[3].style.borderRadius = '0';
+    }, 1200);
+   });
+   
+  </script>
+  
+  <!-- Wonderland | 5th location -->
+  <script>
+
+  location_box[4].addEventListener('click',() => {
+    
+    scroll[5].style.top = '460vh';
+    scroll[4].scrollIntoView({behavior: 'smooth'});
+    location_box[4].style.animationName = 'location_img';
+    location_name[4].style.animationName = 'location_name';
+    location_name[4].style.animationDelay = '.2s';
+    location_icon[4].style.animationName = 'location_icon';
+    country_name[4].style.animationName = 'country_name';
+    know_more[4].style.animationName = 'country_name';
+    heart[4].style.animationName ='heart';
+    heart[4].style.animationDelay = '1.8s';
+    liked_box[4].style.animationName = 'heart';
+    liked_box[4].style.animationDelay = '1.9s';
+    
+    date[4].innerHTML = `${z-5}-${z+2} | ${y}`;
+    
+    setTimeout(() => {
+      location_name[4].style.display = 'none';
+      location_icon[4].style.display = 'none';
+      country_name[4].style.display = 'none';
+      know_more[4].style.display = 'none';
+      
+      setTimeout(() => {
+        heart[4].style.opacity = '1';
+        liked_box[4].style.opacity = '.8';
+        
+        nav_container.style.animationDuration = '.8s';
+        nav_container.style.animationName = 'nav_clr';
+        nav_animation.style.backgroundColor = 'rgba(177, 208, 224, .2)';
+        
+        setTimeout(() => {
+          zoom_l_name[4].style.display = 'block';
+          zoom_l_name[4].style.animationName = 'add_name';
+          
+        setTimeout(() => {
+          zoom_l_icon[4].style.display = 'inline';
+          zoom_l_icon[4].style.animationName = 'zoom_l_icon';
+          zoom_c_name[4].style.display = 'block';
+          zoom_c_name[4].style.animationName = 'zoom_c_name';
+          star_icon[4].style.display = 'block';
+          star_icon[4].style.animationName = 'zoom_l_icon';
+          star_text[4].style.display = 'block';
+          star_text[4].style.animationName = 'zoom_c_name';
+          
+          setTimeout(() => {
+            date_box[4].style.display = 'block';
+            date_box[4].style.animationName = 'zoom_l_icon';
+            
+            setTimeout(() => {
+              book_cont[4].style.display = 'block';
+              book_cont[4].style.animationName = 'book_cont';
+              close_box[4].style.animationName = 'close_box';
+              close_box[4].style.display = 'block';
+  
+  
+  close_l_box[4].addEventListener('click', (event) => {
+   
+   scroll[5].style.top = '450vh';
+   book_cont[4].style.animationName = 'close_book_cont';
+   
+   setTimeout(() => {
+    date_box[4].style.animationName = 'close_zoom_l_icon';
+    close_box[4].style.animationName = 'vanish_close_box';
+    
+    setTimeout(() => {
+      zoom_l_icon[4].style.animationName = 'close_zoom_l_icon';
+      star_icon[4].style.animationName = 'close_zoom_l_icon';
+      zoom_c_name[4].style.animationName = 'close_zoom_c_name';
+      star_text[4].style.animationName = 'close_zoom_c_name';
+        
+      setTimeout(() => {
+        zoom_l_name[4].style.animationName = 'remove_name';
+        close_box[4].style.display ='none';
+        
+        setTimeout(() => {
+          zoom_l_icon[4].style.display = 'none';
+          zoom_c_name[4].style.display = 'none';
+          star_icon[4].style.display = 'none';
+          star_text[4].style.display = 'none';
+          zoom_l_name[4].style.display = 'none';
+          book_cont[4].style.display = 'none';
+          date_box[4].style.display = 'none';
+          heart[4].style.animationName = 'close_heart';
+          heart[4].style.animationDelay = '0s';
+          liked_box[4].style.animationName = 'close_heart';
+          liked_box[4].style.animationDelay = '0s';
+          
+          setTimeout(() => {
+            heart[4].style.opacity = '0';
+            liked_box[4].style.opacity = '0';
+            location_box[4].style.animationName = 'close_location_img';
+            location_box[4].style.width = '80vw';
+            location_box[4].style.height = '80vh';
+            
+            setTimeout(() => {
+              location_box[4].style.borderRadius = '16px';
+              location_img[4].style.borderRadius = '16px';
+            }, 300);
+            
+            setTimeout(() => {
+              location_box[4].style.left = '10vw';
+              location_box[4].style.marginTop = '10vh';
+              
+              nav_container.style.animationDuration = '.8s';
+              nav_container.style.animationName = 'clear_nav_clr';
+              nav_animation.style.backgroundColor = 'rgba(177, 208, 224, 1)';
+              
+              setTimeout(() => {
+                location_name[4].style.animationName = 'close_location_name';
+                location_name[4].style.animationDelay = '0s';
+                location_name[4].style.display = 'block';
+                
+                setTimeout(() => {
+                  location_icon[4].style.animationName = 'close_location_icon';
+                  location_icon[4].style.display = 'block';
+                  country_name[4].style.animationName = 'close_country_name';
+                  country_name[4].style.display = 'block';
+                  know_more[4].style.animationName = 'close_country_name';
+                  know_more[4].style.display = 'block';
+                }, 200);
+                
+              }, 1400);
+              
+            }, 200);
+            
+          }, 200);
+          
+        }, 200);
+        
+      }, 100);
+      
+    }, 200);
+    
+   }, 300);
+   event.stopPropagation();
+  });
+            }, 200);
+            
+          }, 300);
+          
+        }, 100);
+        
+        }, 100);
+        
+      }, 1800);
+      
+    }, 500);
+     
+    setTimeout(() => {
+      location_box[4].style.marginTop = '0';
+      location_box[4].style.left = '0';
+      location_box[4].style.width = '100vw';
+      location_box[4].style.height = '100vh';
+      location_img[4].style.borderRadius = '0';
+    }, 1200);
+   });
+   
+  </script>
+  
+  <!-- Nainital Lake | 6th location -->
+  <script>
+
+  location_box[5].addEventListener('click',() => {
+    
+    
+    scroll[6].style.top = '550vh';
+    scroll[5].scrollIntoView({behavior: 'smooth'});
+    location_box[5].style.animationName = 'location_img';
+    location_name[5].style.animationName = 'location_name';
+    location_name[5].style.animationDelay = '.2s';
+    location_icon[5].style.animationName = 'location_icon';
+    country_name[5].style.animationName = 'country_name';
+    know_more[5].style.animationName = 'country_name';
+    heart[5].style.animationName ='heart';
+    heart[5].style.animationDelay = '1.8s';
+    liked_box[5].style.animationName = 'heart';
+    liked_box[5].style.animationDelay = '1.9s';
+    
+    date[5].innerHTML = `${z+7}-${z+14} | ${y}`;
+    
+    setTimeout(() => {
+      location_name[5].style.display = 'none';
+      location_icon[5].style.display = 'none';
+      country_name[5].style.display = 'none';
+      know_more[5].style.display = 'none';
+      
+      setTimeout(() => {
+        heart[5].style.opacity = '1';
+        liked_box[5].style.opacity = '.8';
+        
+        nav_container.style.animationDuration = '.8s';
+        nav_container.style.animationName = 'nav_clr_3';
+        nav_animation.style.backgroundColor = 'rgba(255, 187, 180, .2)';
+        
+        setTimeout(() => {
+          zoom_l_name[5].style.display = 'block';
+          zoom_l_name[5].style.animationName = 'add_name';
+          
+        setTimeout(() => {
+          zoom_l_icon[5].style.display = 'inline';
+          zoom_l_icon[5].style.animationName = 'zoom_l_icon';
+          zoom_c_name[5].style.display = 'block';
+          zoom_c_name[5].style.animationName = 'zoom_c_name';
+          star_icon[5].style.display = 'block';
+          star_icon[5].style.animationName = 'zoom_l_icon';
+          star_text[5].style.display = 'block';
+          star_text[5].style.animationName = 'zoom_c_name';
+          
+          setTimeout(() => {
+            date_box[5].style.display = 'block';
+            date_box[5].style.animationName = 'zoom_l_icon';
+            
+            setTimeout(() => {
+              book_cont[5].style.display = 'block';
+              book_cont[5].style.animationName = 'book_cont';
+              close_box[5].style.animationName = 'close_box';
+              close_box[5].style.display = 'block';
+  
+  
+  close_l_box[5].addEventListener('click', (event) => {
+   
+   scroll[6].style.top = '540vh';
+   book_cont[5].style.animationName = 'close_book_cont';
+   
+   setTimeout(() => {
+    date_box[5].style.animationName = 'close_zoom_l_icon';
+    close_box[5].style.animationName = 'vanish_close_box';
+    
+    setTimeout(() => {
+      zoom_l_icon[5].style.animationName = 'close_zoom_l_icon';
+      star_icon[5].style.animationName = 'close_zoom_l_icon';
+      zoom_c_name[5].style.animationName = 'close_zoom_c_name';
+      star_text[5].style.animationName = 'close_zoom_c_name';
+        
+      setTimeout(() => {
+        zoom_l_name[5].style.animationName = 'remove_name';
+        close_box[5].style.display ='none';
+        
+        setTimeout(() => {
+          zoom_l_icon[5].style.display = 'none';
+          zoom_c_name[5].style.display = 'none';
+          star_icon[5].style.display = 'none';
+          star_text[5].style.display = 'none';
+          zoom_l_name[5].style.display = 'none';
+          book_cont[5].style.display = 'none';
+          date_box[5].style.display = 'none';
+          heart[5].style.animationName = 'close_heart';
+          heart[5].style.animationDelay = '0s';
+          liked_box[5].style.animationName = 'close_heart';
+          liked_box[5].style.animationDelay = '0s';
+          
+          setTimeout(() => {
+            heart[5].style.opacity = '0';
+            liked_box[5].style.opacity = '0';
+            location_box[5].style.animationName = 'close_location_img';
+            location_box[5].style.width = '80vw';
+            location_box[5].style.height = '80vh';
+            
+            setTimeout(() => {
+              location_box[5].style.borderRadius = '16px';
+              location_img[5].style.borderRadius = '16px';
+            }, 300);
+            
+            setTimeout(() => {
+              location_box[5].style.left = '10vw';
+              location_box[5].style.marginTop = '10vh';
+              
+              nav_container.style.animationDuration = '.8s';
+              nav_container.style.animationName = 'clear_nav_clr_3';
+              nav_animation.style.backgroundColor = 'rgba(255, 187, 180, 1)';
+              
+              setTimeout(() => {
+                location_name[5].style.animationName = 'close_location_name';
+                location_name[5].style.animationDelay = '0s';
+                location_name[5].style.display = 'block';
+                
+                setTimeout(() => {
+                  location_icon[5].style.animationName = 'close_location_icon';
+                  location_icon[5].style.display = 'block';
+                  country_name[5].style.animationName = 'close_country_name';
+                  country_name[5].style.display = 'block';
+                  know_more[5].style.animationName = 'close_country_name';
+                  know_more[5].style.display = 'block';
+                }, 200);
+                
+              }, 1400);
+              
+            }, 200);
+            
+          }, 200);
+          
+        }, 200);
+        
+      }, 100);
+      
+    }, 200);
+    
+   }, 300);
+   event.stopPropagation();
+  });
+            }, 200);
+            
+          }, 300);
+          
+        }, 100);
+        
+        }, 100);
+        
+      }, 1800);
+      
+    }, 500);
+     
+    setTimeout(() => {
+      location_box[5].style.marginTop = '0';
+      location_box[5].style.left = '0';
+      location_box[5].style.width = '100vw';
+      location_box[5].style.height = '100vh';
+      location_img[5].style.borderRadius = '0';
+    }, 1200);
+   });
+   
+  </script>
+  
+<!-- Smoky Mountains | 7th location -->
+  <script>
+
+  location_box[6].addEventListener('click',() => {
+    
+    scroll[7].style.top = '640vh';
+    scroll[6].scrollIntoView({behavior: 'smooth'});
+    location_box[6].style.animationName = 'location_img';
+    location_name[6].style.animationName = 'location_name';
+    location_name[6].style.animationDelay = '.2s';
+    location_icon[6].style.animationName = 'location_icon';
+    country_name[6].style.animationName = 'country_name';
+    know_more[6].style.animationName = 'country_name';
+    heart[6].style.animationName ='heart';
+    heart[6].style.animationDelay = '1.8s';
+    liked_box[6].style.animationName = 'heart';
+    liked_box[6].style.animationDelay = '1.9s';
+    
+    date[6].innerHTML = `${z+4}-${z+11} | ${y}`;
+    
+    setTimeout(() => {
+      location_name[6].style.display = 'none';
+      location_icon[6].style.display = 'none';
+      country_name[6].style.display = 'none';
+      know_more[6].style.display = 'none';
+      
+      setTimeout(() => {
+        heart[6].style.opacity = '1';
+        liked_box[6].style.opacity = '.8';
+        
+        nav_container.style.animationDuration = '.8s';
+        nav_container.style.animationName = 'nav_clr_4';
+        nav_animation.style.backgroundColor = 'rgba(133, 152, 133, .2)';
+        
+        setTimeout(() => {
+          zoom_l_name[6].style.display = 'block';
+          zoom_l_name[6].style.animationName = 'add_name';
+          
+        setTimeout(() => {
+          zoom_l_icon[6].style.display = 'inline';
+          zoom_l_icon[6].style.animationName = 'zoom_l_icon';
+          zoom_c_name[6].style.display = 'block';
+          zoom_c_name[6].style.animationName = 'zoom_c_name';
+          star_icon[6].style.display = 'block';
+          star_icon[6].style.animationName = 'zoom_l_icon';
+          star_text[6].style.display = 'block';
+          star_text[6].style.animationName = 'zoom_c_name';
+          
+          setTimeout(() => {
+            date_box[6].style.display = 'block';
+            date_box[6].style.animationName = 'zoom_l_icon';
+            
+            setTimeout(() => {
+              book_cont[6].style.display = 'block';
+              book_cont[6].style.animationName = 'book_cont';
+              close_box[6].style.animationName = 'close_box';
+              close_box[6].style.display = 'block';
+  
+  
+  close_l_box[6].addEventListener('click', (event) => {
+   
+   scroll[7].style.top = '630vh';
+   book_cont[6].style.animationName = 'close_book_cont';
+   
+   setTimeout(() => {
+    date_box[6].style.animationName = 'close_zoom_l_icon';
+    close_box[6].style.animationName = 'vanish_close_box';
+    
+    setTimeout(() => {
+      zoom_l_icon[6].style.animationName = 'close_zoom_l_icon';
+      star_icon[6].style.animationName = 'close_zoom_l_icon';
+      zoom_c_name[6].style.animationName = 'close_zoom_c_name';
+      star_text[6].style.animationName = 'close_zoom_c_name';
+        
+      setTimeout(() => {
+        zoom_l_name[6].style.animationName = 'remove_name';
+        close_box[6].style.display ='none';
+        
+        setTimeout(() => {
+          zoom_l_icon[6].style.display = 'none';
+          zoom_c_name[6].style.display = 'none';
+          star_icon[6].style.display = 'none';
+          star_text[6].style.display = 'none';
+          zoom_l_name[6].style.display = 'none';
+          book_cont[6].style.display = 'none';
+          date_box[6].style.display = 'none';
+          heart[6].style.animationName = 'close_heart';
+          heart[6].style.animationDelay = '0s';
+          liked_box[6].style.animationName = 'close_heart';
+          liked_box[6].style.animationDelay = '0s';
+          
+          setTimeout(() => {
+            heart[6].style.opacity = '0';
+            liked_box[6].style.opacity = '0';
+            location_box[6].style.animationName = 'close_location_img';
+            location_box[6].style.width = '80vw';
+            location_box[6].style.height = '80vh';
+            
+            setTimeout(() => {
+              location_box[6].style.borderRadius = '16px';
+              location_img[6].style.borderRadius = '16px';
+            }, 300);
+            
+            setTimeout(() => {
+              location_box[6].style.left = '10vw';
+              location_box[6].style.marginTop = '10vh';
+              
+              nav_container.style.animationDuration = '.8s';
+              nav_container.style.animationName = 'clear_nav_clr_4';
+              nav_animation.style.backgroundColor = 'rgba(133, 152, 133, 1)';
+              
+              setTimeout(() => {
+                location_name[6].style.animationName = 'close_location_name';
+                location_name[6].style.animationDelay = '0s';
+                location_name[6].style.display = 'block';
+                
+                setTimeout(() => {
+                  location_icon[6].style.animationName = 'close_location_icon';
+                  location_icon[6].style.display = 'block';
+                  country_name[6].style.animationName = 'close_country_name';
+                  country_name[6].style.display = 'block';
+                  know_more[6].style.animationName = 'close_country_name';
+                  know_more[6].style.display = 'block';
+                }, 200);
+                
+              }, 1400);
+              
+            }, 200);
+            
+          }, 200);
+          
+        }, 200);
+        
+      }, 100);
+      
+    }, 200);
+    
+   }, 300);
+   event.stopPropagation();
+  });
+            }, 200);
+            
+          }, 300);
+          
+        }, 100);
+        
+        }, 100);
+        
+      }, 1800);
+      
+    }, 500);
+     
+    setTimeout(() => {
+      location_box[6].style.marginTop = '0';
+      location_box[6].style.left = '0';
+      location_box[6].style.width = '100vw';
+      location_box[6].style.height = '100vh';
+      location_img[6].style.borderRadius = '0';
+    }, 1200);
+   });
+   
+  </script>
+  
+  <!-- Tromsø | 8th location -->
+  <script>
+
+  location_box[7].addEventListener('click',() => {
+    
+    scroll[7].scrollIntoView({behavior: 'smooth'});
+    location_box[7].style.animationName = 'location_img';
+    location_name[7].style.animationName = 'location_name';
+    location_name[7].style.animationDelay = '.2s';
+    location_icon[7].style.animationName = 'location_icon';
+    country_name[7].style.animationName = 'country_name';
+    know_more[7].style.animationName = 'country_name';
+    heart[7].style.animationName ='heart';
+    heart[7].style.animationDelay = '1.8s';
+    liked_box[7].style.animationName = 'heart';
+    liked_box[7].style.animationDelay = '1.9s';
+    
+    date[7].innerHTML = `${z+3}-${z+11} | ${y}`;
+    
+    setTimeout(() => {
+      location_name[7].style.display = 'none';
+      location_icon[7].style.display = 'none';
+      country_name[7].style.display = 'none';
+      know_more[7].style.display = 'none';
+      
+      setTimeout(() => {
+        heart[7].style.opacity = '1';
+        liked_box[7].style.opacity = '.8';
+        
+        nav_container.style.animationDuration = '.8s';
+        nav_container.style.animationName = 'nav_clr';
+        nav_animation.style.backgroundColor = 'rgba(177, 208, 224, .2)';
+        
+        setTimeout(() => {
+          zoom_l_name[7].style.display = 'block';
+          zoom_l_name[7].style.animationName = 'add_name';
+          
+        setTimeout(() => {
+          zoom_l_icon[7].style.display = 'inline';
+          zoom_l_icon[7].style.animationName = 'zoom_l_icon';
+          zoom_c_name[7].style.display = 'block';
+          zoom_c_name[7].style.animationName = 'zoom_c_name';
+          star_icon[7].style.display = 'block';
+          star_icon[7].style.animationName = 'zoom_l_icon';
+          star_text[7].style.display = 'block';
+          star_text[7].style.animationName = 'zoom_c_name';
+          
+          setTimeout(() => {
+            date_box[7].style.display = 'block';
+            date_box[7].style.animationName = 'zoom_l_icon';
+            
+            setTimeout(() => {
+              book_cont[7].style.display = 'block';
+              book_cont[7].style.animationName = 'book_cont';
+              close_box[7].style.animationName = 'close_box';
+              close_box[7].style.display = 'block';
+  
+  
+  close_l_box[7].addEventListener('click', (event) => {
+    
+   book_cont[7].style.animationName = 'close_book_cont';
+   
+   setTimeout(() => {
+    date_box[7].style.animationName = 'close_zoom_l_icon';
+    close_box[7].style.animationName = 'vanish_close_box';
+    
+    setTimeout(() => {
+      zoom_l_icon[7].style.animationName = 'close_zoom_l_icon';
+      star_icon[7].style.animationName = 'close_zoom_l_icon';
+      zoom_c_name[7].style.animationName = 'close_zoom_c_name';
+      star_text[7].style.animationName = 'close_zoom_c_name';
+        
+      setTimeout(() => {
+        zoom_l_name[7].style.animationName = 'remove_name';
+        close_box[7].style.display ='none';
+        
+        setTimeout(() => {
+          zoom_l_icon[7].style.display = 'none';
+          zoom_c_name[7].style.display = 'none';
+          star_icon[7].style.display = 'none';
+          star_text[7].style.display = 'none';
+          zoom_l_name[7].style.display = 'none';
+          book_cont[7].style.display = 'none';
+          date_box[7].style.display = 'none';
+          heart[7].style.animationName = 'close_heart';
+          heart[7].style.animationDelay = '0s';
+          liked_box[7].style.animationName = 'close_heart';
+          liked_box[7].style.animationDelay = '0s';
+          
+          setTimeout(() => {
+            heart[7].style.opacity = '0';
+            liked_box[7].style.opacity = '0';
+            location_box[7].style.animationName = 'close_location_img';
+            location_box[7].style.width = '80vw';
+            location_box[7].style.height = '80vh';
+            
+            setTimeout(() => {
+              location_box[7].style.borderRadius = '16px';
+              location_img[7].style.borderRadius = '16px';
+            }, 300);
+            
+            setTimeout(() => {
+              location_box[7].style.left = '10vw';
+              location_box[7].style.marginTop = '10vh';
+              
+              nav_container.style.animationDuration = '.8s';
+              nav_container.style.animationName = 'clear_nav_clr';
+              nav_animation.style.backgroundColor = 'rgba(177, 208, 224, 1)';
+              
+              setTimeout(() => {
+                location_name[7].style.animationName = 'close_location_name';
+                location_name[7].style.animationDelay = '0s';
+                location_name[7].style.display = 'block';
+                
+                setTimeout(() => {
+                  location_icon[7].style.animationName = 'close_location_icon';
+                  location_icon[7].style.display = 'block';
+                  country_name[7].style.animationName = 'close_country_name';
+                  country_name[7].style.display = 'block';
+                  know_more[7].style.animationName = 'close_country_name';
+                  know_more[7].style.display = 'block';
+                }, 200);
+                
+              }, 1400);
+              
+            }, 200);
+            
+          }, 200);
+          
+        }, 200);
+        
+      }, 100);
+      
+    }, 200);
+    
+   }, 300);
+   event.stopPropagation();
+  });
+            }, 200);
+            
+          }, 300);
+          
+        }, 100);
+        
+        }, 100);
+        
+      }, 1800);
+      
+    }, 500);
+     
+    setTimeout(() => {
+      location_box[7].style.marginTop = '0';
+      location_box[7].style.left = '0';
+      location_box[7].style.width = '100vw';
+      location_box[7].style.height = '100vh';
+      location_img[7].style.borderRadius = '0';
+    }, 1200);
+   });
+   
+  </script>
+  
+  <script>
+    book_cont[0].onclick = () => {
+      swal("🥳 Woohoo 🥳", " Pack your suitcase, and let's begin the journey ! " ,"success");
+    }
+    
+    book_cont[1].onclick = () => {
+      swal("¡¡ Hell yeah !!", "I have some plans to do,\n Let's go to Ladakh !" ,"success");
+    }
+    
+    book_cont[2].onclick = () => {
+      swal("¡¡ Let's go !!", "Naah we didn't have time 😐,\n Hurry up or I'll leave you here 🤪!" ,"success");
+    }
+    
+    book_cont[3].onclick = () => {
+      swal("😁 Yippee 😁", "I have some plans to do,\n Let's go to Sigiriya !" ,"success");
+    }
+    
+    book_cont[4].onclick = () => {
+      swal("🥳 Woohoo 🥳", "I'm curious to be in wonderland 🧚!" ,"success");
+    }
+    
+    book_cont[5].onclick = () => {
+      swal("¡¡ ta-da !!", "I just bought tickets to Raja ampat 🥳\n Hope that place would be great for a date 🥰" ,"success");
+    }
+    
+    book_cont[6].onclick = () => {
+      swal("😍 Yippee 😍", "Always wanna to go to smoky mountain 😇" ,"success");
+    }
+    
+    book_cont[7].onclick = () => {
+      swal("🥳 Let's Go 🥳", "Wait what, Slavbard ?? So we are going to see Northern lights 😍 !");
+    }
+    
+  </script>
+  
+</body>
+</html>
